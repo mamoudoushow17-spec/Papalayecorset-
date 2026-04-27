@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PapalayeCorset</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Georgia,serif;
+background:#fffdf8;
+color:#4e342e;
+}
+
+.topbar{
+position:fixed;
+top:0;
+width:100%;
+background:#4e342e;
+color:white;
+text-align:center;
+padding:12px;
+z-index:3000;
+}
+
+.navbar{
+position:fixed;
+top:45px;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:2500;
+box-sizing:border-box;
+}
+
+.menu-btn{
+font-size:34px;
+cursor:pointer;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.icons{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+.icons button{
+padding:6px 10px;
+margin:0;
+}
+
+.menu{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background:#4e342e;
+overflow-x:hidden;
+transition:.4s;
+padding-top:90px;
+z-index:4000;
+}
+
+.menu a{
+display:block;
+padding:22px;
+font-size:30px;
+text-decoration:none;
+color:white;
+}
+
+.hero{
+height:100vh;
+background:url('photoaccueil.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:120px;
+}
+
+.overlay{
+background:rgba(78,52,46,.55);
+padding:55px;
+color:white;
+}
+
+.overlay h1{
+font-size:55px;
+margin:0;
+}
+
+.btn{
+display:inline-block;
+background:white;
+color:#4e342e;
+padding:15px 30px;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:90px 25px;
+text-align:center;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:20px;
+}
+
+.card{
+background:white;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+padding-bottom:20px;
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+footer{
+background:#4e342e;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="topbar">
+Bienvenue chez PapalayeCorset
+</div>
+
+
+
+<div class="navbar">
+
+<div class="menu-btn" onclick="ouvrirMenu()">
+☰
+</div>
+
+<div class="logo">
+PAPALAYECORSET
+</div>
+
+<div class="icons">
+👜 <span id="count">0</span>
+<button onclick="ajouterPanier()">+</button>
+<button onclick="viderPanier()">Effacer</button>
+</div>
+
+</div>
+
+
+
+<div id="menu" class="menu">
+
+<a href="javascript:void(0)" onclick="fermerMenu()">
+✖ Fermer
+</a>
+
+<a href="#boutique" onclick="fermerMenu()">
+Boutique
+</a>
+
+<a href="#contact" onclick="fermerMenu()">
+Contact
+</a>
+
+</div>
+
+
+
+
+<section id="accueil" class="hero">
+
+<div class="overlay">
+
+<h1>PAPALAYECORSET</h1>
+
+<p>
+Haute Couture • Sur Mesure • Élégance
+</p>
+
+<a href="#boutique" class="btn">
+Voir la Boutique
+</a>
+
+<a href="https://wa.me/221772068744" class="btn">
+Commander
+</a>
+
+</div>
+
+</section>
+
+
+
+
+<section id="boutique">
+
+<h2>Boutique</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="photo1.jpg">
+<h3>Collection</h3>
+</div>
+
+<div class="card">
+<img src="photo2.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo3.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo4.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo5.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo6.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo7.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo8.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo9.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo10.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+<div class="card">
+<img src="photo11.jpg">
+<h3>Collection</h3>
+<button onclick="ajouterPanier()">Ajouter au panier</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>📍 Pikine Texaco, Sénégal</p>
+
+<p>📞 +221 77 206 87 44</p>
+
+<p>Instagram : @papalayecorset</p>
+
+<a href="https://wa.me/221772068744">
+<button>WhatsApp</button>
+</a>
+
+<a href="https://instagram.com/papalayecorset">
+<button>Instagram</button>
+</a>
+
+<a href="https://maps.google.com/?q=Pikine+Texaco+Senegal">
+<button>Voir Localisation</button>
+</a>
+
+</section>
+
+
+
+<footer>
+
+À PROPOS • CONTACT • INSTAGRAM
+
+<br><br>
+
+© PapalayeCorset
+
+</footer>
+
+
+
+<script>
+
+let panier=0;
+
+function afficherPanier(){
+document.getElementById("count").innerHTML=panier;
+}
+
+function ajouterPanier(){
+panier++;
+afficherPanier();
+}
+
+function retirerPanier(){
+if(panier>0){
+panier--;
+afficherPanier();
+}
+}
+
+function viderPanier(){
+panier=0;
+afficherPanier();
+}
+
+function ouvrirMenu(){
+
+let menu=document.getElementById("menu");
+
+if(menu.style.width=="250px"){
+menu.style.width="0";
+}else{
+menu.style.width="250px";
+}
+
+}
+
+function fermerMenu(){
+document.getElementById("menu").style.width="0";
+}
+
+</script>
+
+</body>
+</html>
